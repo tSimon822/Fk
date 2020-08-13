@@ -1,0 +1,18 @@
+main button {
+    height: 300px;
+    width: 300px;
+    font-size: 60px;
+    margin: 30px;
+}
+main{
+    text-align: center;
+}
+
+main button a {
+    color: black;
+}
+
+main button a:hover {
+    text-decoration: none;
+    color: black;
+}

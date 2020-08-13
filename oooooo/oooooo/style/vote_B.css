@@ -1,0 +1,58 @@
+.main {
+
+    margin-left:100px;
+    font-family: "Microsoft JhengHei";
+}
+.major {
+    margin-bottom: 10px;
+    width: 1300px;
+    padding: 10px;
+    background:white;
+    border-top:7px solid rgb(75, 75, 245);
+    border-radius: 10px;
+    
+}
+.main h3 {
+    width: 450px;
+    padding: 5px 10px;
+}
+.lab{
+    font-size: 25px;
+}
+.txt{
+    font-size: 20px;
+}
+.major div{
+    padding-top: 15px;
+    margin: 10px;
+    margin-left: 80px;
+}
+.op{
+    margin: 0!important;
+}
+.des{
+    width: 800px;
+    height: 400px;
+    vertical-align:top;
+    resize: none;
+    font-size: 20px;
+}
+.new{
+    margin-left: 5px;
+    width: 100px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 16px;
+    transition: 0.5s;
+}
+.new:hover{
+    width: 110px;
+    height: 35px;
+    font-size: 18px;
+}
+.but{
+    text-align: center;
+}
