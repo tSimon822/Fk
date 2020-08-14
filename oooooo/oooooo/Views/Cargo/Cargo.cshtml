@@ -1,0 +1,81 @@
+﻿@model IEnumerable<oooooo.tCargo>
+
+@{
+    ViewBag.Title = "Cargo";
+}
+
+<h2>郵務管理</h2>
+
+<p>
+    <i class="fa fa-plus"></i> @Html.ActionLink("新增", "Create")
+</p>
+<div class="searchbar mb-4">
+    <form class="form-inline my-2 my-lg-0 ">
+        <input class="form-control_1 mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search">
+        <span> 日期：</span>
+        <input class="form-control_date mr-sm-2" id="datepicker" type="date" placeholder="請選擇日期"
+               aria-label="Search"> <span> 到 &nbsp;</span>
+        <input class="form-control_date mr-sm-2" id="datepicker" type="date" placeholder="請選擇日期"
+               aria-label="Search">
+        <button type="button" class="btn btn-info"> <i class="fa fa-search"></i> 搜尋</button>
+    </form>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            NO.
+        </th>
+        <th>
+            貨運公司
+        </th>
+        <th>
+            寄件人
+        </th>
+        <th>
+            收件人
+        </th>
+        <th>
+            種類
+        </th>
+        <th>
+            收件日期
+        </th>
+        <th>
+            簽收狀態
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fCargoId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fShipCompany)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fSender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fUserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fCargoType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fArriveDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fReceiveOrNot)
+            </td>
+
+            <td>
+                @Html.ActionLink("備註", "Details", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+</table>
