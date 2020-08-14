@@ -315,10 +315,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\A1234567Controller.cs" />
     <Compile Include="Controllers\Announcement_BController.cs" />
     <Compile Include="Controllers\BackFinancialController.cs" />
     <Compile Include="Controllers\BackReservationController.cs" />
+    <Compile Include="Controllers\CargoController.cs" />
     <Compile Include="Controllers\Forum_BController.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="dbecoDaily.Context.cs">
@@ -421,6 +421,8 @@
     <Content Include="Views\BackFinancial\payKeyIn.cshtml" />
     <Content Include="Views\BackFinancial\payList.cshtml" />
     <Content Include="Views\BackReservation\Index.cshtml" />
+    <Content Include="Views\Cargo\Cargo.cshtml" />
+    <Content Include="Views\Cargo\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
