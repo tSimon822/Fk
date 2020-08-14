@@ -297,6 +297,7 @@
     <Content Include="Views\test\Lis.cshtml" />
     <Content Include="Views\test\Lais.cshtml" />
     <Content Include="Views\test\Lay.cshtml" />
+    <Content Include="Views\test\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
