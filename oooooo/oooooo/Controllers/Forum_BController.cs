@@ -1,4 +1,5 @@
-﻿using System;
+﻿using oooooo.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,7 @@ namespace oooooo.Controllers
         // GET: Forum_B
         public ActionResult List(int? fId)
         {
+            var admin = Session[CDictionary.ECO_ADMIN_LOGIN];
             dbecoDailyEntities db = new dbecoDailyEntities();
             tForum x = db.tForum.FirstOrDefault(m => m.fForumId == fId);
             var q = from od in db.tForumComment
