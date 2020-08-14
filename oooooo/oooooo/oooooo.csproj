@@ -320,6 +320,7 @@
     <Compile Include="Controllers\BackReservationController.cs" />
     <Compile Include="Controllers\BackVoteController.cs" />
     <Compile Include="Controllers\CargoController.cs" />
+    <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\Forum_BController.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="dbecoDaily.Context.cs">
@@ -436,6 +437,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\A1234567\" />
     <Folder Include="Views\BackVote\" />
+    <Folder Include="Views\Event\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
