@@ -7,7 +7,7 @@
 <h2>reservation</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("新增預約", "Create")
 </p>
 <table class="table">
     <tr>
@@ -32,7 +32,7 @@
         <th>
             @Html.DisplayNameFor(model => model.fRemark)
         </th>
-        <th></th>
+        <th>功能</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -59,9 +59,8 @@
             @Html.DisplayFor(modelItem => item.fRemark)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("修改預約", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("完成預約", "Delete", new { /* id=item.PrimaryKey */ })
         </td>
     </tr>
 }
