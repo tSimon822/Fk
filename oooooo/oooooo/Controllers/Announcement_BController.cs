@@ -23,6 +23,7 @@ namespace oooooo.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Create(tAnnouncement tAnn)
         {
             if (tAnn.fImage != null)
