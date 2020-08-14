@@ -29,5 +29,9 @@ namespace oooooo.Controllers
         {
             return View();
         }
+        public ActionResult Lally()
+        {
+            return View();
+        }
     }
 }
