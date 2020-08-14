@@ -319,6 +319,7 @@
     <Compile Include="Controllers\BackFinancialController.cs" />
     <Compile Include="Controllers\BackReservationController.cs" />
     <Compile Include="Controllers\CargoController.cs" />
+    <Compile Include="Controllers\FLoginController.cs" />
     <Compile Include="Controllers\Forum_BController.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="dbecoDaily.Context.cs">
@@ -393,6 +394,7 @@
     <Compile Include="tVote.cs">
       <DependentUpon>dbecoDaily.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\CforLogin.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -424,6 +426,9 @@
     <Content Include="Views\Cargo\Cargo.cshtml" />
     <Content Include="Views\Cargo\Create.cshtml" />
     <Content Include="Views\Forum_B\List.cshtml" />
+    <Content Include="Views\FLogin\Forget.cshtml" />
+    <Content Include="Views\FLogin\Home.cshtml" />
+    <Content Include="Views\FLogin\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
