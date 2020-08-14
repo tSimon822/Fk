@@ -420,10 +420,10 @@
     <Content Include="Views\BackFinancial\managementFee.cshtml" />
     <Content Include="Views\BackFinancial\payKeyIn.cshtml" />
     <Content Include="Views\BackFinancial\payList.cshtml" />
-    <Content Include="Views\BackReservation\Index.cshtml" />
     <Content Include="Views\Cargo\Cargo.cshtml" />
     <Content Include="Views\Cargo\Create.cshtml" />
     <Content Include="Views\Forum_B\List.cshtml" />
+    <Content Include="Views\BackReservation\reservation.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
