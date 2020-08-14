@@ -318,8 +318,8 @@
     <Compile Include="Controllers\Announcement_BController.cs" />
     <Compile Include="Controllers\BackFinancialController.cs" />
     <Compile Include="Controllers\BackReservationController.cs" />
+    <Compile Include="Controllers\BackVoteController.cs" />
     <Compile Include="Controllers\CargoController.cs" />
-    <Compile Include="Controllers\eventController.cs" />
     <Compile Include="Controllers\Forum_BController.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="dbecoDaily.Context.cs">
@@ -424,9 +424,7 @@
     <Content Include="Views\BackReservation\Index.cshtml" />
     <Content Include="Views\Cargo\Cargo.cshtml" />
     <Content Include="Views\Cargo\Create.cshtml" />
-    <Content Include="Views\event\Event.cshtml" />
-    <Content Include="Views\event\Create.cshtml" />
-    <Content Include="Views\event\SetRegistForm.cshtml" />
+    <Content Include="Views\Forum_B\List.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -437,7 +435,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\A1234567\" />
-    <Folder Include="Views\Forum_B\" />
+    <Folder Include="Views\BackVote\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
