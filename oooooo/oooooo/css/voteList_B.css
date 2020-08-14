@@ -1,0 +1,13 @@
+﻿.content{
+    width:1000px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.votetime input {
+    border-radius: 5px;
+    border: 1px solid #D0D0D0;
+}
+.voteArea textarea {
+    border-radius: 5px;
+    border: 1px solid #D0D0D0;
+}

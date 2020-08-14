@@ -1,0 +1,54 @@
+﻿@model IEnumerable<oooooo.tVote>
+
+@{
+    ViewBag.Title = "voteList";
+}
+<head>
+    <link rel="stylesheet" href="~/css/voteList_B.css">
+</head>
+
+
+<h2>投票列表</h2>
+
+<p>
+    @Html.ActionLink("新增投票", "Create",null,new {Class="btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fVfromDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fVendDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fVtilte)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fVcontent)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fVfromDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fVendDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fVtilte)
+        </td>
+        <td class="content">
+            @Html.DisplayFor(modelItem => item.fVcontent)
+        </td>
+        <td>
+            @Html.ActionLink("修改", "Edit", new { id=item.fVId  },new {Class = "btn btn-primary" }) |
+            @Html.ActionLink("刪除", "Delete", new { id=item.fVId },new { onClick = "return confirm('確定要刪除嗎？')" ,Class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>
