@@ -1,0 +1,115 @@
+﻿@model IEnumerable<oooooo.tEvent>
+
+@{
+    ViewBag.Title = "Event_B";
+}
+
+<head>
+    <link rel="stylesheet" href="../style/event_B.css">
+</head>
+<h2>社區活動管理</h2>
+
+@functions{
+    public string formatDatetime(string datetime)
+    {
+        return datetime.Substring(0, 4) + "/" +
+            datetime.Substring(4, 2) + "/" +
+            datetime.Substring(6, 2) + " " +
+            datetime.Substring(8, 2) + ":" +
+            datetime.Substring(10, 2);
+    }
+}
+<p>
+    <i class="fa fa-plus"></i> @Html.ActionLink("新增活動", "Create")
+
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            No.
+        </th>
+        <th>
+            活動名稱
+        </th>
+        <th>
+            分類
+        </th>
+        <th>
+            報名開始日
+        </th>
+        <th>
+            報名截止日
+        </th>
+        <th>
+            活動發起人
+        </th>
+
+        <th>
+            活動日期
+        </th>
+        <th>
+            活動時間
+        </th>
+        <th>
+            地點
+        </th>
+
+        <th>
+            費用
+        </th>
+
+        <th>
+            備註
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fEventId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fEventTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fCategory)
+            </td>
+            <td>
+                @formatDatetime(item.fEventFromDay)
+            </td>
+            <td>
+                @formatDatetime(item.fEventFromDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fUserId)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.fEventDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fEventTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fEventLocation)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.fEventFee)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.fRemark)
+            </td>
+            <td>
+                @Html.ActionLink("編輯", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("詳細資料", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("刪除", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+</table>
