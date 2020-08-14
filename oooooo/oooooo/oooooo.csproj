@@ -319,6 +319,7 @@
     <Compile Include="Controllers\BackFinancialController.cs" />
     <Compile Include="Controllers\BackReservationController.cs" />
     <Compile Include="Controllers\CargoController.cs" />
+    <Compile Include="Controllers\eventController.cs" />
     <Compile Include="Controllers\Forum_BController.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="dbecoDaily.Context.cs">
@@ -423,6 +424,9 @@
     <Content Include="Views\BackReservation\Index.cshtml" />
     <Content Include="Views\Cargo\Cargo.cshtml" />
     <Content Include="Views\Cargo\Create.cshtml" />
+    <Content Include="Views\event\Event.cshtml" />
+    <Content Include="Views\event\Create.cshtml" />
+    <Content Include="Views\event\SetRegistForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
