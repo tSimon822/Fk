@@ -1,0 +1,84 @@
+﻿@model IEnumerable<oooooo.tAnnouncement>
+
+@{
+    ViewBag.Title = "List";
+
+}
+@functions{
+    public string getVirtualPath(string path)
+    {
+        if (string.IsNullOrEmpty(path))
+            return "";
+        string[] items = path.Split("\\".ToCharArray());
+        if (items.Length > 1)
+            return "../image/" + items[items.Length - 1];
+        return path;
+    }
+
+}
+<header>
+    <link rel="stylesheet" href="~/css/B_Announcement.css"> 
+</header>
+
+<h2>公告</h2>
+
+<p>
+    @Html.ActionLink("新增公告", "Create", null ,new { Class = "btn btn-primary" })
+</p>
+<table class="table table-striped table-advance table-hover">
+    <tr>
+        <th class="col-lg-1">
+            @Html.DisplayNameFor(model => model.fAnnouncementId)
+        </th>
+        <th class="col-lg-2">
+            @Html.DisplayNameFor(model => model.fAnnTitle)
+        </th>
+        <th class="col-lg-1">
+            @Html.DisplayNameFor(model => model.fAnnDate)
+        </th>
+        <th class="col-lg-5">
+            @Html.DisplayNameFor(model => model.fAnnContent)
+        </th>
+        <th class="col-lg-1">
+            @Html.DisplayNameFor(model => model.fClickRate)
+        </th>
+        <th class="col-lg-1">
+            @Html.DisplayNameFor(model => model.fAnnFilePath)
+        </th>
+        <th class="col-lg-1">功能</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fAnnouncementId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fAnnTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fAnnDate)
+            </td>
+            <td >
+                @Html.DisplayFor(modelItem => item.fAnnContent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fClickRate)
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.fAnnFilePath)*@
+                <img src="@getVirtualPath(item.fAnnFilePath)" alt="" style="height:100px;width:100px;" />
+            </td>
+            <td>
+                @Html.ActionLink("修改", "Edit", new { id = item.fAnnouncementId}, new { Class = "btn btn-primary" })
+                @Html.ActionLink("刪除", "Delete", new { id = item.fAnnouncementId }, new { onClick = "return confirm('確定要刪除嗎?')", Class = "btn btn-danger" })
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+

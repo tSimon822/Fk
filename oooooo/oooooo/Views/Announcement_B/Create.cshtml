@@ -1,0 +1,146 @@
+﻿@model oooooo.tAnnouncement
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+
+<header>
+    <link rel="stylesheet" href="~/css/B_Announcement.css" />
+    <link rel="stylesheet" href="~/js/jquery-ui-1.12.1/external/jquery/jquery.js">
+    <link rel="stylesheet" href="~/js/jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="~/js/jquery-ui-1.12.1/jquery-ui.theme.css">
+    <script src="~/js/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="~/js/jquery-ui-1.12.1/jquery-ui.js"></script>
+</header>
+
+
+@using (Html.BeginForm("Create", "Announcement_B", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+                <div class="form-horizontal">
+                    <header class="panel-heading">
+                        <h4>新增公告</h4>
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    </header>
+                    <div class="panel-body">
+                        <div class="form">
+                            <form class="form-validate form-horizontal" id="feedback_form" method="get" action="">
+
+                                <div class="form-group ">
+                                    @Html.LabelFor(model => model.fAnnTitle, htmlAttributes: new { @class = "control-label col-lg-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.fAnnTitle, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.fAnnTitle, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group Anntime">
+                                    @Html.LabelFor(model => model.fAnnDate, htmlAttributes: new { @class = "control-label col-lg-2" })
+                                    <div class="col-md-10 ">
+                                        <label for="from">起</label>
+                                        <input type="text" id="from" name="from" autocomplete="off">
+                                        <label for="to">迄</label>
+                                        <input type="text" id="to" name="to" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    @Html.LabelFor(model => model.fUserId, htmlAttributes: new { @class = "control-label col-lg-2" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.fUserId, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.fUserId, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group Anntextarea">
+                                    @Html.LabelFor(model => model.fAnnContent, htmlAttributes: new { @class = "control-label col-lg-2" })
+                                    <div class="col-md-10">
+                                        @Html.TextAreaFor(m => m.fAnnContent, 10, 40, new { @class = "form-control", style = "resize: none" })
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    @Html.LabelFor(model => model.fAnnFilePath, htmlAttributes: new { @class = "control-label col-lg-2" })
+                                    <div class="col-md-10">
+                                        <input type="file" name="fImage" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.Label("是否加入輪播", htmlAttributes: new { @class = "control-label col-lg-2" })
+                                    <div class="col-md-10">
+                                        <input type="radio" id="yes" value="是" name="yesornot">
+                                        <label>是</label>
+                                        <input type="radio" id="no" value="否" name="yesornot">
+                                        <label>否</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="送出" class="btn btn-default" onclick="doProcess()" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+}
+
+<div>
+    @Html.ActionLink("回公告列表", "List")
+</div>
+
+<script>
+    $(function () {
+        var dateFormat = "mm/dd/yy",
+            from = $("#from")
+                .datepicker({
+                    defaultDate: "+1w",
+                    changeMonth: true,
+                    numberOfMonths: 3,
+                })
+                .on("change", function () {
+                    to.datepicker("option", "minDate", getDate(this));
+                }),
+            to = $("#to").datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 3
+            })
+                .on("change", function () {
+                    from.datepicker("option", "maxDate", getDate(this));
+                });
+
+        function getDate(element) {
+            var date;
+            try {
+                date = $.datepicker.parseDate(dateFormat, element.value);
+            } catch (error) {
+                date = null;
+            }
+
+            return date;
+        }
+    });
+
+    function doProcess() {
+        for (counter = 0; counter < document.getElementsByName("yesornot").length; counter++) {
+            if (document.getElementsByName("yesornot")[counter].checked == true) {
+                alert(document.getElementsByName("yesornot")[counter].value);
+            }
+
+        }
+    }
+</script>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
