@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="dbecoDailyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="dbecoDailyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tAnnouncement">
           <Key>
             <PropertyRef Name="fAnnouncementId" />
@@ -226,7 +226,7 @@
           <Property Name="fVtilte" Type="nvarchar" MaxLength="100" />
           <Property Name="fVcontent" Type="nvarchar" MaxLength="500" />
         </EntityType>
-        <Association Name="FK__tAnnounce__fUser__403A8C7D">
+        <Association Name="FK__tAnnounce__fUser__2D27B809">
           <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
           <End Role="tAnnouncement" Type="Self.tAnnouncement" Multiplicity="*" />
           <ReferentialConstraint>
@@ -238,7 +238,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tCandidat__fUser__5BE2A6F2">
+        <Association Name="FK__tCandidat__fUser__48CFD27E">
           <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
           <End Role="tCandidate" Type="Self.tCandidate" Multiplicity="*" />
           <ReferentialConstraint>
@@ -250,7 +250,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tCandidate__fVId__5CD6CB2B">
+        <Association Name="FK__tCandidate__fVId__49C3F6B7">
           <End Role="tVote" Type="Self.tVote" Multiplicity="0..1" />
           <End Role="tCandidate" Type="Self.tCandidate" Multiplicity="*" />
           <ReferentialConstraint>
@@ -262,7 +262,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tCargo__fUserId__571DF1D5">
+        <Association Name="FK__tCargo__fUserId__440B1D61">
           <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
           <End Role="tCargo" Type="Self.tCargo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -274,7 +274,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tEvent__fUserId__398D8EEE">
+        <Association Name="FK__tEvent__fUserId__267ABA7A">
           <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
           <End Role="tEvent" Type="Self.tEvent" Multiplicity="*" />
           <ReferentialConstraint>
@@ -286,7 +286,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tEventReg__fEven__3C69FB99">
+        <Association Name="FK__tEventReg__fEven__29572725">
           <End Role="tEvent" Type="Self.tEvent" Multiplicity="0..1" />
           <End Role="tEventRegister" Type="Self.tEventRegister" Multiplicity="*" />
           <ReferentialConstraint>
@@ -298,7 +298,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tEventReg__fUser__3D5E1FD2">
+        <Association Name="FK__tEventReg__fUser__2A4B4B5E">
           <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
           <End Role="tEventRegister" Type="Self.tEventRegister" Multiplicity="*" />
           <ReferentialConstraint>
@@ -310,7 +310,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tForum__fUserId__49C3F6B7">
+        <Association Name="FK__tForum__fUserId__36B12243">
           <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
           <End Role="tForum" Type="Self.tForum" Multiplicity="*" />
           <ReferentialConstraint>
@@ -322,7 +322,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tForumCom__fForu__4D94879B">
+        <Association Name="FK__tForumCom__fForu__3A81B327">
           <End Role="tForum" Type="Self.tForum" Multiplicity="0..1" />
           <End Role="tForumComment" Type="Self.tForumComment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -334,7 +334,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tForumCom__fUser__4CA06362">
+        <Association Name="FK__tForumCom__fUser__398D8EEE">
           <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
           <End Role="tForumComment" Type="Self.tForumComment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -346,7 +346,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tMail__fReceiver__440B1D61">
+        <Association Name="FK__tMail__fReceiver__30F848ED">
           <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
           <End Role="tMail" Type="Self.tMail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -358,7 +358,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tMail__fSenderId__4316F928">
+        <Association Name="FK__tMail__fSenderId__300424B4">
           <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
           <End Role="tMail" Type="Self.tMail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -370,7 +370,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tManageme__fUser__46E78A0C">
+        <Association Name="FK__tManageme__fUser__33D4B598">
           <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
           <End Role="tManagementFee" Type="Self.tManagementFee" Multiplicity="*" />
           <ReferentialConstraint>
@@ -382,7 +382,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tNaturalG__fUser__5441852A">
+        <Association Name="FK__tNaturalG__fUser__412EB0B6">
           <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
           <End Role="tNaturalGas" Type="Self.tNaturalGas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -394,7 +394,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tReservat__fRese__6754599E">
+        <Association Name="FK__tReservat__fRese__5441852A">
           <End Role="tReservationTime" Type="Self.tReservationTime" Multiplicity="0..1" />
           <End Role="tReservation" Type="Self.tReservation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -406,7 +406,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tReservat__fUser__66603565">
+        <Association Name="FK__tReservat__fUser__534D60F1">
           <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
           <End Role="tReservation" Type="Self.tReservation" Multiplicity="*" />
           <ReferentialConstraint>
@@ -418,7 +418,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tUserVote__fSele__619B8048">
+        <Association Name="FK__tUserVote__fSele__4E88ABD4">
           <End Role="tCandidate" Type="Self.tCandidate" Multiplicity="0..1" />
           <End Role="tUserVote" Type="Self.tUserVote" Multiplicity="*" />
           <ReferentialConstraint>
@@ -430,7 +430,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tUserVote__fUser__5FB337D6">
+        <Association Name="FK__tUserVote__fUser__4CA06362">
           <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
           <End Role="tUserVote" Type="Self.tUserVote" Multiplicity="*" />
           <ReferentialConstraint>
@@ -442,7 +442,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tUserVote__fVId__60A75C0F">
+        <Association Name="FK__tUserVote__fVId__4D94879B">
           <End Role="tVote" Type="Self.tVote" Multiplicity="0..1" />
           <End Role="tUserVote" Type="Self.tUserVote" Multiplicity="*" />
           <ReferentialConstraint>
@@ -472,85 +472,84 @@
           <EntitySet Name="tReservationTime" EntityType="Self.tReservationTime" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tUserVote" EntityType="Self.tUserVote" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tVote" EntityType="Self.tVote" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__tAnnounce__fUser__403A8C7D" Association="Self.FK__tAnnounce__fUser__403A8C7D">
+          <AssociationSet Name="FK__tAnnounce__fUser__2D27B809" Association="Self.FK__tAnnounce__fUser__2D27B809">
             <End Role="tMemberData" EntitySet="tMemberData" />
             <End Role="tAnnouncement" EntitySet="tAnnouncement" />
           </AssociationSet>
-          <AssociationSet Name="FK__tCandidat__fUser__5BE2A6F2" Association="Self.FK__tCandidat__fUser__5BE2A6F2">
+          <AssociationSet Name="FK__tCandidat__fUser__48CFD27E" Association="Self.FK__tCandidat__fUser__48CFD27E">
             <End Role="tMemberData" EntitySet="tMemberData" />
             <End Role="tCandidate" EntitySet="tCandidate" />
           </AssociationSet>
-          <AssociationSet Name="FK__tCandidate__fVId__5CD6CB2B" Association="Self.FK__tCandidate__fVId__5CD6CB2B">
+          <AssociationSet Name="FK__tCandidate__fVId__49C3F6B7" Association="Self.FK__tCandidate__fVId__49C3F6B7">
             <End Role="tVote" EntitySet="tVote" />
             <End Role="tCandidate" EntitySet="tCandidate" />
           </AssociationSet>
-          <AssociationSet Name="FK__tCargo__fUserId__571DF1D5" Association="Self.FK__tCargo__fUserId__571DF1D5">
+          <AssociationSet Name="FK__tCargo__fUserId__440B1D61" Association="Self.FK__tCargo__fUserId__440B1D61">
             <End Role="tMemberData" EntitySet="tMemberData" />
             <End Role="tCargo" EntitySet="tCargo" />
           </AssociationSet>
-          <AssociationSet Name="FK__tEvent__fUserId__398D8EEE" Association="Self.FK__tEvent__fUserId__398D8EEE">
+          <AssociationSet Name="FK__tEvent__fUserId__267ABA7A" Association="Self.FK__tEvent__fUserId__267ABA7A">
             <End Role="tMemberData" EntitySet="tMemberData" />
             <End Role="tEvent" EntitySet="tEvent" />
           </AssociationSet>
-          <AssociationSet Name="FK__tEventReg__fEven__3C69FB99" Association="Self.FK__tEventReg__fEven__3C69FB99">
+          <AssociationSet Name="FK__tEventReg__fEven__29572725" Association="Self.FK__tEventReg__fEven__29572725">
             <End Role="tEvent" EntitySet="tEvent" />
             <End Role="tEventRegister" EntitySet="tEventRegister" />
           </AssociationSet>
-          <AssociationSet Name="FK__tEventReg__fUser__3D5E1FD2" Association="Self.FK__tEventReg__fUser__3D5E1FD2">
+          <AssociationSet Name="FK__tEventReg__fUser__2A4B4B5E" Association="Self.FK__tEventReg__fUser__2A4B4B5E">
             <End Role="tMemberData" EntitySet="tMemberData" />
             <End Role="tEventRegister" EntitySet="tEventRegister" />
           </AssociationSet>
-          <AssociationSet Name="FK__tForum__fUserId__49C3F6B7" Association="Self.FK__tForum__fUserId__49C3F6B7">
+          <AssociationSet Name="FK__tForum__fUserId__36B12243" Association="Self.FK__tForum__fUserId__36B12243">
             <End Role="tMemberData" EntitySet="tMemberData" />
             <End Role="tForum" EntitySet="tForum" />
           </AssociationSet>
-          <AssociationSet Name="FK__tForumCom__fForu__4D94879B" Association="Self.FK__tForumCom__fForu__4D94879B">
+          <AssociationSet Name="FK__tForumCom__fForu__3A81B327" Association="Self.FK__tForumCom__fForu__3A81B327">
             <End Role="tForum" EntitySet="tForum" />
             <End Role="tForumComment" EntitySet="tForumComment" />
           </AssociationSet>
-          <AssociationSet Name="FK__tForumCom__fUser__4CA06362" Association="Self.FK__tForumCom__fUser__4CA06362">
+          <AssociationSet Name="FK__tForumCom__fUser__398D8EEE" Association="Self.FK__tForumCom__fUser__398D8EEE">
             <End Role="tMemberData" EntitySet="tMemberData" />
             <End Role="tForumComment" EntitySet="tForumComment" />
           </AssociationSet>
-          <AssociationSet Name="FK__tMail__fReceiver__440B1D61" Association="Self.FK__tMail__fReceiver__440B1D61">
+          <AssociationSet Name="FK__tMail__fReceiver__30F848ED" Association="Self.FK__tMail__fReceiver__30F848ED">
             <End Role="tMemberData" EntitySet="tMemberData" />
             <End Role="tMail" EntitySet="tMail" />
           </AssociationSet>
-          <AssociationSet Name="FK__tMail__fSenderId__4316F928" Association="Self.FK__tMail__fSenderId__4316F928">
+          <AssociationSet Name="FK__tMail__fSenderId__300424B4" Association="Self.FK__tMail__fSenderId__300424B4">
             <End Role="tMemberData" EntitySet="tMemberData" />
             <End Role="tMail" EntitySet="tMail" />
           </AssociationSet>
-          <AssociationSet Name="FK__tManageme__fUser__46E78A0C" Association="Self.FK__tManageme__fUser__46E78A0C">
+          <AssociationSet Name="FK__tManageme__fUser__33D4B598" Association="Self.FK__tManageme__fUser__33D4B598">
             <End Role="tMemberData" EntitySet="tMemberData" />
             <End Role="tManagementFee" EntitySet="tManagementFee" />
           </AssociationSet>
-          <AssociationSet Name="FK__tNaturalG__fUser__5441852A" Association="Self.FK__tNaturalG__fUser__5441852A">
+          <AssociationSet Name="FK__tNaturalG__fUser__412EB0B6" Association="Self.FK__tNaturalG__fUser__412EB0B6">
             <End Role="tMemberData" EntitySet="tMemberData" />
             <End Role="tNaturalGas" EntitySet="tNaturalGas" />
           </AssociationSet>
-          <AssociationSet Name="FK__tReservat__fRese__6754599E" Association="Self.FK__tReservat__fRese__6754599E">
+          <AssociationSet Name="FK__tReservat__fRese__5441852A" Association="Self.FK__tReservat__fRese__5441852A">
             <End Role="tReservationTime" EntitySet="tReservationTime" />
             <End Role="tReservation" EntitySet="tReservation" />
           </AssociationSet>
-          <AssociationSet Name="FK__tReservat__fUser__66603565" Association="Self.FK__tReservat__fUser__66603565">
+          <AssociationSet Name="FK__tReservat__fUser__534D60F1" Association="Self.FK__tReservat__fUser__534D60F1">
             <End Role="tMemberData" EntitySet="tMemberData" />
             <End Role="tReservation" EntitySet="tReservation" />
           </AssociationSet>
-          <AssociationSet Name="FK__tUserVote__fSele__619B8048" Association="Self.FK__tUserVote__fSele__619B8048">
+          <AssociationSet Name="FK__tUserVote__fSele__4E88ABD4" Association="Self.FK__tUserVote__fSele__4E88ABD4">
             <End Role="tCandidate" EntitySet="tCandidate" />
             <End Role="tUserVote" EntitySet="tUserVote" />
           </AssociationSet>
-          <AssociationSet Name="FK__tUserVote__fUser__5FB337D6" Association="Self.FK__tUserVote__fUser__5FB337D6">
+          <AssociationSet Name="FK__tUserVote__fUser__4CA06362" Association="Self.FK__tUserVote__fUser__4CA06362">
             <End Role="tMemberData" EntitySet="tMemberData" />
             <End Role="tUserVote" EntitySet="tUserVote" />
           </AssociationSet>
-          <AssociationSet Name="FK__tUserVote__fVId__60A75C0F" Association="Self.FK__tUserVote__fVId__60A75C0F">
+          <AssociationSet Name="FK__tUserVote__fVId__4D94879B" Association="Self.FK__tUserVote__fVId__4D94879B">
             <End Role="tVote" EntitySet="tVote" />
             <End Role="tUserVote" EntitySet="tUserVote" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="dbecoDailyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

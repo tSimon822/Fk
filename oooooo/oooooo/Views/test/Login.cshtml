@@ -26,22 +26,19 @@
                 <div class="input">
                     <label for="user_ID">帳號:</label>
                     <!-- for =""設定與下方連結 -->
-                    <input type="text" name="account" id="userID" autocomplete="off" onkeyup="value=value.replace(/[^\w\/]/ig,'').toUpperCase()" >
+                    <input type="text" name="userAccout" id="userID" autocomplete="off" onkeyup="value=value.replace(/[^\w\/]/ig,'').toUpperCase()" >
                     <label id="alert" for="">請輸入帳號</label>
 
                 </div>
                 <div class="input">
                     <label for="userPwd">密碼:</label><!-- for =""設定與下方連結 -->
-                    <input type="password" name="pwd" id="userPwd" autocomplete="off">
+                    <input type="password" name="userPassword" id="userPwd" autocomplete="off">
                     <label id="alert" for="">請輸入密碼</label>
                     <!-- type=""password -->
                 </div>
                 <div class="btnGroup">
-                    <button class="btn" type="submit">忘記密碼</button>
+                    <button class="btn">忘記密碼</button>
                     <button class="btn" type="submit">登入</button>
-                    <div class="userForget">
-                   
-                    </div>
                 </div>
             </form>
         </div>

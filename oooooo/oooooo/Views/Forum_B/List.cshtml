@@ -1,0 +1,75 @@
+﻿@model IEnumerable<oooooo.Models.GroupViewModels>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fForumId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fWriter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fUserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fForumTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fPostDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fForumImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fForumContent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fForumComment)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fForumId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fWriter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fUserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fForumTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fPostDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fForumImage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fForumContent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fForumComment)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
