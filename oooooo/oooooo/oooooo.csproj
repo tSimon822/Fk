@@ -325,6 +325,7 @@
     <Compile Include="Controllers\FLoginController.cs" />
     <Compile Include="Controllers\Forum_BController.cs" />
     <Compile Include="Controllers\homeController.cs" />
+    <Compile Include="Controllers\testController.cs" />
     <Compile Include="dbecoDaily.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
