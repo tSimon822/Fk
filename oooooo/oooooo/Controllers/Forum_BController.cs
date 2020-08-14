@@ -1,4 +1,5 @@
-﻿using System;
+﻿using oooooo.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,10 +12,9 @@ namespace oooooo.Controllers
         // GET: Forum_B
         public ActionResult List(int? fId)
         {
+            var admin = Session[CDictionary.ECO_ADMIN_LOGIN];
             dbecoDailyEntities db = new dbecoDailyEntities();
-            tForum x = db.tForum.FirstOrDefault(m => m.fForumId == fId);
             var q = from od in db.tForumComment
-                    where od.fForumId == fId
                     select new Models.GroupViewModels { fWriter = od.tForum.fWriter, fUserName = od.tMemberData.fUserName, fForumTitle = od.tForum.fForumTitle, fPostDate = od.tForum.fPostDate, fForumImage = od.tForum.fForumImage, fForumContent = od.tForum.fForumContent, fForumComment = od.fForumComment };
             return View(q);
         }

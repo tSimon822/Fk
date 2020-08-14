@@ -6,17 +6,17 @@ using System.Web.Mvc;
 
 namespace oooooo.Controllers
 {
-    public class eventController : Controller
+    public class EventController : Controller
     {
-        dbecoDailyEntities db = new dbecoDailyEntities();
-        // GET: event
-        public ActionResult Event()
+        // GET: BackEvent
+        public ActionResult Event_B()
         {
-            var table = from t in db.tEvent
-                        select t;
-            return View(table);
-        }
+            dbecoDailyEntities db = new dbecoDailyEntities();
+            var events = from t in (new dbecoDailyEntities()).tEvent
+                         select t;
+            return View(events);
 
+        }
         public ActionResult Create()
         {
             return View();
@@ -28,7 +28,7 @@ namespace oooooo.Controllers
             dbecoDailyEntities db = new dbecoDailyEntities();
             db.tEvent.Add(p);
             db.SaveChanges();
-            return RedirectToAction("Event");
+            return RedirectToAction("Event_B");
         }
 
         public ActionResult SetRegistForm()
@@ -42,7 +42,7 @@ namespace oooooo.Controllers
             dbecoDailyEntities db = new dbecoDailyEntities();
             db.tEventRegister.Add(p);
             db.SaveChanges();
-            return RedirectToAction("Event");
+            return RedirectToAction("Event_B");
         }
     }
 }

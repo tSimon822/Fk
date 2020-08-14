@@ -1,10 +1,10 @@
-﻿@model IEnumerable<oooooo.Models.reservationViewModel>
+﻿@model IEnumerable<oooooo.tReservation>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "reservation";
 }
 
-<h2>Index</h2>
+<h2>reservation</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -24,7 +24,7 @@
             @Html.DisplayNameFor(model => model.fReservationDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.fReservationTime)
+            @Html.DisplayNameFor(model => model.fReservationTimeId)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.fnumReservation)
@@ -50,7 +50,7 @@
             @Html.DisplayFor(modelItem => item.fReservationDate)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.fReservationTime)
+            @Html.DisplayFor(modelItem => item.fReservationTimeId)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.fnumReservation)

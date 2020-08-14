@@ -47,7 +47,7 @@
             @Html.DisplayFor(modelItem => item.fGasHandInOrNot)
         </td>
         <td>
-            @Html.ActionLink("提醒繳費", "inform", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("提醒填寫", "Inform", "Edit", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
