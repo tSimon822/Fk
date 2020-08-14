@@ -40,12 +40,12 @@ namespace oooooo.Controllers
                 return View();
             if (tMem.fAuthority == 0)
             {
-                Session[CDictionary.ECO_USER_LOGIN] = tMem;
+                //Session[CDictionary.ECO_USER_LOGIN] = tMem;
                 return RedirectToAction("Lay");
             }
             
 
-            Session[CDictionary.ECO_USER_LOGIN] = tMem;
+            //Session[CDictionary.ECO_USER_LOGIN] = tMem;
             return RedirectToAction("Lally");
         }
         public ActionResult Lally()
