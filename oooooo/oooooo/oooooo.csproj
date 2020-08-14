@@ -315,7 +315,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\A1234567Controller.cs" />
     <Compile Include="Controllers\Announcement_BController.cs" />
     <Compile Include="Controllers\BackFinancialController.cs" />
     <Compile Include="Controllers\BackReservationController.cs" />
