@@ -315,8 +315,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\A1234567Controller.cs" />
+    <Compile Include="Controllers\Announcement_BController.cs" />
     <Compile Include="Controllers\homeController.cs" />
-    <Compile Include="Controllers\testController.cs" />
     <Compile Include="dbecoDaily.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -403,6 +403,7 @@
     <Content Include="Views\test\Lay.cshtml" />
     <Content Include="Views\test\Login.cshtml" />
     <Content Include="Views\test\Lally.cshtml" />
+    <Content Include="Views\Announcement_B\List.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

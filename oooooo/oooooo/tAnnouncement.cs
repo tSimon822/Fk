@@ -14,14 +14,24 @@ namespace oooooo
     
     public partial class tAnnouncement
     {
+        [DisplayName("公告編號")]
         public int fAnnouncementId { get; set; }
+        [Required(ErrorMessage = "標題不可空白")]
+        [DisplayName("標題")]
         public string fAnnTitle { get; set; }
+        [DisplayName("公告日期")]
         public string fAnnDate { get; set; }
+        [DisplayName("管委會")]
         public string fUserId { get; set; }
+        [DisplayName("公告內容")]
         public string fAnnContent { get; set; }
+        [DisplayName("瀏覽量")]
         public Nullable<int> fClickRate { get; set; }
+        [DisplayName("照片路徑")]
         public string fAnnFilePath { get; set; }
-    
+        [DisplayName("照片")]
+        public HttpPostedFileBase fImage { get; set; }
+
         public virtual tMemberData tMemberData { get; set; }
     }
 }
