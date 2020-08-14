@@ -1,0 +1,50 @@
+﻿@model oooooo.tIncome
+
+@{
+    ViewBag.Title = "incomeEdit";
+}
+
+<h2>incomeEdit</h2>
+
+
+<link rel="stylesheet" href="~/style/B_payKeyIn.css">
+
+<style>
+    .t1 {
+        width: 100px;
+        float: left;
+        text-align: right;
+        margin-right: 5px;
+    }
+</style>
+
+<form method="post" action="">
+    <section>
+        <label class="t1" for="incomeDate">入賬日期:</label>
+        <input type="text" name="incomeDate" id="incomeDate" value="@Model.fIcDate">
+        <label for="type">類別:</label>
+        <select name="type" id="type">
+            <option value="tManageFee">管理費</option>
+            <option value="ad">廣告</option>
+            <option value="activity">活動</option>
+            <option value="rental">場地租借</option>
+        </select>
+    </section>
+    <section>
+
+        <label class="t1" for="item">名稱:</label>
+        <input type="text" name="item" id="item" value="@Model.fIcItem">
+        <label for="incomeMoney">金額:</label>
+        <input type="text" name="incomeMoney" id="incomeMoney" value="@Model.fIcMoney">
+    </section>
+    <section>
+        <label class="t1" for="source">來源:</label>
+        <input type="text" name="source" id="source" value="@Model.fIcSource">
+        <label for="payee">收款人:</label>
+        <input type="text" name="payee" id="payee" value="@Model.fPayee">
+    </section>
+    <section class="d-flex">
+        <label class="t1" for="remark">交代事項:</label>
+        <textarea name="remark" id="remark" cols="90" rows="5"></textarea>
+    </section>
+</form>

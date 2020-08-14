@@ -1,0 +1,69 @@
+﻿@model IEnumerable<oooooo.Models.reservationViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fReservationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fReservationType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fReservationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fReservationTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fnumReservation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fRemark)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fReservationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fReservationType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fUserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fReservationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fReservationTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fnumReservation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fRemark)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

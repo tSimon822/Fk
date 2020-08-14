@@ -1,0 +1,45 @@
+﻿@model IEnumerable<oooooo.tManagementFee>
+
+@{
+    ViewBag.Title = "managementFee";
+}
+
+<h2>管理費</h2>
+
+<p>
+    @Html.ActionLink("新增繳費", "BackFinancial")
+</p>
+<table class="table table-striped table-advance table-hover order-table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fManagementFeePeriod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fHandInOrNot)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fManagementFeePeriod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fUserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fHandInOrNot)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

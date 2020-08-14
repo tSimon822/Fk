@@ -1,0 +1,69 @@
+﻿@model IEnumerable<oooooo.tIncome>
+
+@{
+    ViewBag.Title = "incomeList";
+}
+
+<h2>incomeList</h2>
+
+<p>
+    @Html.ActionLink("新增", "incomeKeyIn", "BackFinancial", new { }, new { @class = "btn btn-success" })
+</p>
+<table class="table table-striped table-advance table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fIcId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fIcDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fIcType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fIcItem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fIcMoney)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fIcSource)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fRemark)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fIcId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fIcDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fIcType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fIcItem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fIcMoney)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fIcSource)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fRemark)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", "BackFinancial", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-primary" }) |
+            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+            @Html.ActionLink("Delete", "incomeDelete", "BackFinancial", new { id = item.fIcId }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>
