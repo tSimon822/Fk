@@ -11,7 +11,10 @@ namespace oooooo
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+    using System.Web;
+
     public partial class tAnnouncement
     {
         [DisplayName("公告編號")]
