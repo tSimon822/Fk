@@ -21,5 +21,9 @@ namespace oooooo.Controllers
         {
             return View();
         }
+        public ActionResult Lay()
+        {
+            return View();
+        }
     }
 }
