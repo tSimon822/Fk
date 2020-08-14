@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "Forget";
+}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/css/login/front_forget.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/frontPage.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>eCO Daily</title>
+
+    <style>
+    </style>
+</head>
+
+<body>
+    <header class="d-flex" style="position: fixed; width: 100%;">
+        <a class="logo col-2" href="homepage_B.html"><img class="logoimg" src="image/logo.png" alt=""> </a>
+        <nav class="col-10" style="background-color: rgb(34, 45, 50);">
+
+
+        </nav>
+    </header>
+
+
+    <div class="container">
+
+        <!-- <div class="row menubar justify-content-center">
+
+
+        </div> -->
+
+
+        <main class=" container d-flex">
+            <div class="login">
+                <form class="form" action="">
+                    <h3>忘記密碼</h3>
+                    <div class="input">
+
+                        <label class="namelab" for="user_ID">使用者帳號:</label>
+                        <!-- for =""設定與下方連結 -->
+                    </div>
+                    <input type="text" name="" id="userID" value="" placeholder="">
+                    <label id="alert" for="">請輸入帳號</label>
+                    <div class="input">
+
+                        <label for="userPwd">E-Mail:</label>
+                        <!-- for =""設定與下方連結 -->
+                        <input type="text" name="" id="userPwd" value="" placeholder="">
+                        <label id="alert" for="">請輸入E-Mail</label>
+                        <!-- type=""password-->
+                    </div>
+                    <div class="btnGroup">
+                        <button class="btn" id="commit">確定</button>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script>
+
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
