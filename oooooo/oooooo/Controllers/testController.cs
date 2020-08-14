@@ -17,5 +17,9 @@ namespace oooooo.Controllers
         {
             return View();
         }
+        public ActionResult Lais()
+        {
+            return View();
+        }
     }
 }
