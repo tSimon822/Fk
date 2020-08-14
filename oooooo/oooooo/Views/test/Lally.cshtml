@@ -1,7 +1,11 @@
-﻿
+﻿@using oooooo.Models;
+
 @{
     ViewBag.Title = "Lally";
+    tMemberData member = Session[CDictionary.ECO_USER_LOGIN] as tMemberData;
+
 }
 
-<h2>Lally</h2>
+<h2>管理員登入</h2>
+<h2> @member.fUserId </h2>
 
