@@ -12,10 +12,9 @@ namespace oooooo.Controllers
     {
         // GET: BackReservation
         dbecoDailyEntities db = new dbecoDailyEntities();
-        public ActionResult Index(int? Id=1)
+        public ActionResult Index(int? Id)
         {
             var table = from t in db.tReservation
-                        where t.fReservationId == Id
                         select new Models.reservationViewModel
                         {
                             fReservationId = t.fReservationId,
