@@ -105,6 +105,7 @@
     <Content Include="css\jquery-jvectormap-1.2.2.css" />
     <Content Include="css\jquery-ui-1.10.4.min.css" />
     <Content Include="css\line-icons.css" />
+    <Content Include="css\login\font-login.css" />
     <Content Include="css\owl.carousel.css" />
     <Content Include="css\style-responsive.css" />
     <Content Include="css\style.css" />
@@ -117,6 +118,17 @@
     <Content Include="image\adult-attractive-beautiful-beauty-415829.jpg" />
     <Content Include="image\iu.jpg" />
     <Content Include="image\iu1.jpg" />
+    <Content Include="image\login\23391.jpg" />
+    <Content Include="image\login\adult-attractive-beautiful-beauty-415829.jpg" />
+    <Content Include="image\login\akham.jpg" />
+    <Content Include="image\login\btree.jpg" />
+    <Content Include="image\login\login1.jpg" />
+    <Content Include="image\login\logo.png" />
+    <Content Include="image\login\nutri1.jpg" />
+    <Content Include="image\login\nutri2.jpg" />
+    <Content Include="image\login\nutri3.jpg" />
+    <Content Include="image\login\old-bu.jpg" />
+    <Content Include="image\login\XVbCpW.jpg" />
     <Content Include="img\arrow-up.png" />
     <Content Include="img\avatar-mini.jpg" />
     <Content Include="img\avatar-mini2.jpg" />
