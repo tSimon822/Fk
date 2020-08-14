@@ -322,6 +322,7 @@
     <Compile Include="Controllers\BackVoteController.cs" />
     <Compile Include="Controllers\CargoController.cs" />
     <Compile Include="Controllers\EventController.cs" />
+    <Compile Include="Controllers\FLoginController.cs" />
     <Compile Include="Controllers\Forum_BController.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="dbecoDaily.Context.cs">
