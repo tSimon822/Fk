@@ -266,12 +266,6 @@
     <Content Include="js\twopiechart.js" />
     <Content Include="js\xcharts.min.js" />
     <Content Include="js\yearMonth.js" />
-    <Content Include="obj\Debug\oooooo.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\oooooo.dll" />
-    <Content Include="obj\Debug\oooooo.pdb" />
-    <Content Include="obj\Debug\TempPE\dbecoDaily.Context.cs.dll" />
-    <Content Include="obj\Debug\TempPE\dbecoDaily.cs.dll" />
-    <Content Include="obj\Debug\TempPE\dbecoDaily.Designer.cs.dll" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\ElegantIcons.eot" />
@@ -289,12 +283,6 @@
     <Content Include="dbecoDaily.edmx.diagram">
       <DependentUpon>dbecoDaily.edmx</DependentUpon>
     </Content>
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\edmxResourcesToEmbed\dbecoDaily.csdl" />
-    <Content Include="obj\Debug\edmxResourcesToEmbed\dbecoDaily.msl" />
-    <Content Include="obj\Debug\edmxResourcesToEmbed\dbecoDaily.ssdl" />
-    <Content Include="obj\Debug\oooooo.csproj.CopyComplete" />
-    <Content Include="obj\Debug\oooooo.csproj.CoreCompileInputs.cache" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -354,9 +342,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LoginModel\Clogin.cs" />
     <Compile Include="Models\GroupViewModels.cs" />
     <Compile Include="Models\reservationViewModel.cs" />
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tAnnouncement.cs">
       <DependentUpon>dbecoDaily.tt</DependentUpon>
