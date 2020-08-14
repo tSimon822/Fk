@@ -317,6 +317,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\A1234567Controller.cs" />
     <Compile Include="Controllers\Announcement_BController.cs" />
+    <Compile Include="Controllers\BackFinancialController.cs" />
+    <Compile Include="Controllers\BackReservationController.cs" />
     <Compile Include="Controllers\Forum_BController.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="dbecoDaily.Context.cs">
@@ -338,6 +340,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\GroupViewModels.cs" />
+    <Compile Include="Models\reservationViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tAnnouncement.cs">
       <DependentUpon>dbecoDaily.tt</DependentUpon>
@@ -409,6 +412,15 @@
     <Content Include="Views\Announcement_B\List.cshtml" />
     <Content Include="Views\Announcement_B\Create.cshtml" />
     <Content Include="Views\Announcement_B\Edit.cshtml" />
+    <Content Include="Views\BackFinancial\financialList.cshtml" />
+    <Content Include="Views\BackFinancial\gasData.cshtml" />
+    <Content Include="Views\BackFinancial\incomeEdit.cshtml" />
+    <Content Include="Views\BackFinancial\incomeKeyIn.cshtml" />
+    <Content Include="Views\BackFinancial\incomeList.cshtml" />
+    <Content Include="Views\BackFinancial\managementFee.cshtml" />
+    <Content Include="Views\BackFinancial\payKeyIn.cshtml" />
+    <Content Include="Views\BackFinancial\payList.cshtml" />
+    <Content Include="Views\BackReservation\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

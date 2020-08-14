@@ -1,0 +1,55 @@
+﻿@model IEnumerable<oooooo.tNaturalGas>
+
+@{
+    ViewBag.Title = "gasData";
+}
+
+<h2>瓦斯表</h2>
+
+<p>
+    @Html.ActionLink("新增", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fGasId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fCurrentReading)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fGasPeriod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fGasHandInOrNot)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fGasId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fUserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fCurrentReading)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fGasPeriod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fGasHandInOrNot)
+        </td>
+        <td>
+            @Html.ActionLink("提醒繳費", "inform", new { /* id=item.PrimaryKey */ }) |
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "incomeKeyIn";
+}
+
+@*<form method="post" action="">
+    <section>
+        <label class="t1" for="incomeDate">入賬日期:</label>
+        <input type="text" name="incomeDate" id="incomeDate">
+        <label for="type">類別:</label>
+        <select name="type" id="type">
+            <option value="tManageFee">管理費</option>
+            <option value="ad">廣告</option>
+            <option value="activity">活動</option>
+            <option value="rental">場地租借</option>
+        </select>
+    </section>
+    <section>
+        <label class="t1" for="item">名稱:</label>
+        <input type="text" name="item" id="item">
+        <label for="incomeMoney">金額:</label>
+        <input type="text" name="incomeMoney" id="incomeMoney">
+    </section>
+    <section>
+        <label class="t1" for="source">來源:</label>
+        <input type="text" name="source" id="source">
+        <label for="payee">收款人:</label>
+        <input type="text" name="payee" id="payee">
+    </section>
+    <section class="d-flex">
+        <label class="t1" for="remark">交代事項:</label>
+        <textarea name="remark" id="remark" cols="90" rows="5"></textarea>
+    </section>
+    </form>*@
+<h2>收入資料輸入</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+        <section class="panel">
+            <header class="panel-heading">
+                @*支出資料輸入*@
+            </header>
+            <div class="panel-body">
+                <div class="form">
+                    <form class="form-validate form-horizontal" id="feedback_form" method="post" action="~/">
+                        <div class="form-group ">
+                            <label for="date" class="control-label col-lg-2">日期<span class="required">*</span></label>
+                            <div class="col-lg-3">
+                                <input class="form-control" id="date" name="date" type="date" required />
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label for="type" class="control-label col-lg-2">類別<span class="required">*</span></label>
+                            <div class="col-lg-3">
+                                <select class="form-control" name="type" id="type">
+                                    <option value="tManageFee">管理費</option>
+                                    <option value="ad">廣告</option>
+                                    <option value="activity">活動</option>
+                                    <option value="rental">場地租借</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label for="payName" class="control-label col-lg-2">名稱</label>
+                            <div class="col-lg-3">
+                                <input class="form-control " id="payName" type="text" name="payName" />
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label for="IcMoney" class="control-label col-lg-2">金額<span class="required">*</span></label>
+                            <div class="col-lg-3">
+                                <input class="form-control" id="IcMoney" name="IcMoney" type="text" required />
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label for="IcSource" class="control-label col-lg-2">來源</label>
+                            <div class="col-lg-3">
+                                <input class="form-control" id="IcSource" name="IcSource" required />
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label for="IcRemark" class="control-label col-lg-2">附註</label>
+                            <div class="col-lg-10">
+                                <textarea class="form-control " id="IcRemark" name="IcRemark" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                                <button class="btn btn-primary" type="submit">Save</button>
+                                <button class="btn btn-default" type="button">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</div>

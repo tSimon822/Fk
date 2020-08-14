@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "financialList";
+}
+
+<h2>收支圖表</h2>
+<label for="selectYear">年度:</label>
+<select name="selectYear" id="selectYear"></select>
+<label for="selectMonth">月份:</label>
+<select name="selectMonth" id="selectMonth"></select>
+<div>
+    <div id="twopiechart" style="margin: 0 auto; width: 1250px;height: 400px;"></div>
+    <div id="totalChart" style="margin: 0 auto; width: 800px;height: 600px;"></div>
+</div>
+
+<script src="~/js/twopiechart.js"></script>
+<script src="~/js/financialBarLine.js"></script>
