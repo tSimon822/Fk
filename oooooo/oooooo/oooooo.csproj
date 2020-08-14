@@ -43,7 +43,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -110,6 +118,16 @@
     <Content Include="css\style.css" />
     <Content Include="css\widgets.css" />
     <Content Include="css\xcharts.min.css" />
+    <Content Include="dbecoDaily.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>dbecoDaily.Context.cs</LastGenOutput>
+      <DependentUpon>dbecoDaily.edmx</DependentUpon>
+    </Content>
+    <Content Include="dbecoDaily.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbecoDaily.edmx</DependentUpon>
+      <LastGenOutput>dbecoDaily.cs</LastGenOutput>
+    </Content>
     <Content Include="fonts\ElegantIcons.svg" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -244,6 +262,13 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <EntityDeploy Include="dbecoDaily.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>dbecoDaily.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="dbecoDaily.edmx.diagram">
+      <DependentUpon>dbecoDaily.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -279,10 +304,76 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="Controllers\testController.cs" />
+    <Compile Include="dbecoDaily.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbecoDaily.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbecoDaily.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbecoDaily.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbecoDaily.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tAnnouncement.cs">
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tCandidate.cs">
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tCargo.cs">
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tEvent.cs">
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tEventRegister.cs">
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tForum.cs">
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tForumComment.cs">
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tIncome.cs">
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tMail.cs">
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tManagementFee.cs">
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tMemberData.cs">
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tNaturalGas.cs">
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tPay.cs">
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tReservation.cs">
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tReservationTime.cs">
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tUserVote.cs">
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tVote.cs">
+      <DependentUpon>dbecoDaily.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -308,6 +399,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
