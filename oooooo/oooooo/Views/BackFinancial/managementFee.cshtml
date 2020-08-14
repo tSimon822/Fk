@@ -7,7 +7,7 @@
 <h2>管理費</h2>
 
 <p>
-    @Html.ActionLink("新增繳費", "BackFinancial")
+    @Html.ActionLink("新增繳費","payKeyIn", "BackFinancial",new { },new {@class="btn btn-primary"})
 </p>
 <table class="table table-striped table-advance table-hover order-table">
     <tr>
@@ -35,9 +35,7 @@
             @Html.DisplayFor(modelItem => item.fHandInOrNot)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("催促繳費","Inform", "Edit", new { /* id=item.PrimaryKey */ },new { @class="btn btn-danger"})
         </td>
     </tr>
 }
