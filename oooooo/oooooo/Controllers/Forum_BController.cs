@@ -11,7 +11,7 @@ namespace oooooo.Controllers
         // GET: Forum_B
         public ActionResult List(int? fId)
         {
-            dbecoDailyEntities2 db = new dbecoDailyEntities2();
+            dbecoDailyEntities db = new dbecoDailyEntities();
 
             var q = from od in db.tForumComment
                     where od.fForumId == fId
@@ -25,7 +25,7 @@ namespace oooooo.Controllers
             if (id == null)
                 return RedirectToAction("List");
 
-            dbecoDailyEntities2 db = new dbecoDailyEntities2();
+            dbecoDailyEntities db = new dbecoDailyEntities();
             tForum x = db.tForum.FirstOrDefault(m => m.fForumId == id);
             if (x != null)
             {
