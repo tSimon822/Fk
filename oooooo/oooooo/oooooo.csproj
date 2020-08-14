@@ -315,7 +315,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\A1234567Controller.cs" />
     <Compile Include="Controllers\Announcement_BController.cs" />
     <Compile Include="Controllers\Forum_BController.cs" />
     <Compile Include="Controllers\homeController.cs" />
@@ -409,6 +408,7 @@
     <Content Include="Views\Announcement_B\List.cshtml" />
     <Content Include="Views\Announcement_B\Create.cshtml" />
     <Content Include="Views\Announcement_B\Edit.cshtml" />
+    <Content Include="Views\Forum_B\List.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -419,7 +419,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\A1234567\" />
-    <Folder Include="Views\Forum_B\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
