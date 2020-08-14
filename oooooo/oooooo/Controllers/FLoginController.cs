@@ -1,4 +1,5 @@
-﻿using oooooo.ViewModel;
+﻿using oooooo.Models;
+using oooooo.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,13 +23,19 @@ namespace oooooo.Controllers
                 return View();
 
             if (member.fAuthority == 1)
+            {
+                Session[CDictionary.ECO_ADMIN_LOGIN] = member.fUserId;
                 return RedirectToAction("List", "Forum_B");
+            }
 
+            Session[CDictionary.ECO_USER_LOGIN] = member.fUserName;
             return RedirectToAction("Home");
         }
         public ActionResult Home()
         {
-            return View();
+            var name = Session[CDictionary.ECO_USER_LOGIN];
+
+            return View(name);
         }
         public ActionResult Forget()
         {

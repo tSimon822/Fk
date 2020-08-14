@@ -8,5 +8,6 @@ namespace oooooo.Models
     public class CDictionary
     {
         public static readonly string ECO_USER_LOGIN = "ECO_USER_LOGIN";
+        public static readonly string ECO_ADMIN_LOGIN = "ECO_ADMIN_LOGIN";
     }
 }

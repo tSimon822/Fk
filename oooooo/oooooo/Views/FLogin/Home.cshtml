@@ -1,8 +1,8 @@
-﻿
+﻿@using oooooo.Models
 @{
     ViewBag.Title = "Home";
-    tMemberData
+    tMemberData userName = Session[CDictionary.ECO_USER_LOGIN] as tMemberData;
 }
 
 <h2>Home</h2>
-
+<h2>歡迎 @Model 回來</h2>

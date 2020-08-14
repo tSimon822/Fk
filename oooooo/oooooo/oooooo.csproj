@@ -340,6 +340,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CDictionary.cs" />
     <Compile Include="Models\GroupViewModels.cs" />
     <Compile Include="Models\reservationViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
