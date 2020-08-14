@@ -1,0 +1,123 @@
+
+body{
+   background-image: url("../../image/login/old-bu.jpg");
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+.login {
+            width: 500px;
+            height: 600px;
+            background-color: rgba(255,255,255, 0.01);
+            box-shadow: 0 0 10px #000;
+            border-radius: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            margin-top: 150px;
+        }
+
+        .form {
+
+            width: 400px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form h3 {
+            border-bottom:2px solid #fff;
+            font-size: x-large;
+        }
+
+        .form .group {
+            margin-bottom: 20px;
+        }
+
+        .form label {
+            line-height: 2;
+            font-size: 20px;
+            position: relative;
+        }
+
+        .form input {
+            width: 100%;
+            border: 1px solid#aaa;
+            line-height: 3;
+            border-radius: 5px;
+            margin-bottom: 0px;
+
+        }
+        .form input:focus{
+            box-shadow: 0 0 20px black;
+            outline: none;
+        }
+
+        #chAccount{
+            width: 10px;
+        }
+
+        .from .btnGroup {
+            font-size: 0;
+        }
+
+        .form .btn {
+            font-size: 20px;
+            border: none;
+            background-color: rgba(40, 61, 12, 0.2);
+            width: 190px;
+            padding: 10px 0;
+            border-radius: 10px;
+            /* color: white; */
+            margin-top: 20px;
+        }
+
+        .btnGroup .btn+.btn {
+            margin-left: 10px;
+            transition: .3s; 
+            color:white;
+        }
+        .btnGroup a{
+            color: white;
+            text-decoration: none;
+        }
+        .btnGroup a:hover{
+            color: white;
+            text-decoration: none;
+        }
+        .btnGroup button:hover{
+            color: white;
+            outline: none;
+            font-size: 24px;
+            transition: .3s;
+        }
+        .userForget{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+        #alert{
+            font-size: 15px;
+            color: red;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: -20px;
+            display: none;
+        }
+        div input{
+            font-size: 18px;
+            text-align: center;
+            color:white;
+            background-color:transparent;
+            /* padding-bottom: 10px; */
+            margin: auto;
+        }
+        img{
+            align-self: flex-end;
+        }
+
+        
+
