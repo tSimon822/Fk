@@ -1,0 +1,11 @@
+.Anntextarea textarea {
+    border-radius: 5px;
+    border: 1px solid #D0D0D0;
+}
+.Anntime input {
+    border-radius: 5px;
+    border: 1px solid #D0D0D0;
+}
+th,td {
+    text-align:left;
+}
