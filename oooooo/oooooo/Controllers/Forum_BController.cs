@@ -12,7 +12,7 @@ namespace oooooo.Controllers
         // GET: Forum_B
         public ActionResult List(int? fId)
         {
-            var admin = Session[CDictionary.ECO_ADMIN_LOGIN];
+            //var admin = Session[CDictionary.ECO_ADMIN_LOGIN];
             dbecoDailyEntities db = new dbecoDailyEntities();
             var q = from od in db.tForumComment
                     select new Models.GroupViewModels { fWriter = od.tForum.fWriter, fUserName = od.tMemberData.fUserName, fForumTitle = od.tForum.fForumTitle, fPostDate = od.tForum.fPostDate, fForumImage = od.tForum.fForumImage, fForumContent = od.tForum.fForumContent, fForumComment = od.fForumComment };
