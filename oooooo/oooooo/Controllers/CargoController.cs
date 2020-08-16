@@ -11,6 +11,7 @@ namespace oooooo.Controllers
         // GET: Cargo
         public ActionResult Cargo()
         {
+            //2020-08-16
             dbecoDailyEntities db = new dbecoDailyEntities();
             var package = from t in (new dbecoDailyEntities()).tCargo
                           select t;
