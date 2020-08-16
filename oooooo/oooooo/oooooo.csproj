@@ -439,8 +439,8 @@
     <Content Include="Views\FLogin\Forget.cshtml" />
     <Content Include="Views\FLogin\Home.cshtml" />
     <Content Include="Views\FLogin\Login.cshtml" />
-    <Content Include="Views\Event\Detail.cshtml" />
     <Content Include="Views\Event\Edit.cshtml" />
+    <Content Include="Views\Event\RegistertDetail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

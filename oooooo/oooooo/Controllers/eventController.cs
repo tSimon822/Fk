@@ -60,7 +60,7 @@ namespace oooooo.Controllers
         public ActionResult Edit(tEvent p)
         {
             if (string.IsNullOrEmpty(p.fEventTitle))
-                return RedirectToAction("List");
+                return RedirectToAction("Event_B");
             dbecoDailyEntities db = new dbecoDailyEntities();
             tEvent editevent = db.tEvent.FirstOrDefault(m => m.fEventId == p.fEventId);
             if (editevent != null)
@@ -83,16 +83,14 @@ namespace oooooo.Controllers
             return RedirectToAction("Event_B");
         }
 
-        public ActionResult Detail()
+        
+        public ActionResult RegistertDetail()
         {
-            dbecoDailyEntities db = new dbecoDailyEntities();
-            var details = from t in (new dbecoDailyEntities()).tEventRegister
+            dbecoDailyEntities db = new dbecoDailyEntities();               
+            var RegistertPpl = from t in (new dbecoDailyEntities()).tEventRegister
                          select t;
-            return View(details);
+            return View(RegistertPpl);
         }
-
-       
-
 
 
     }
