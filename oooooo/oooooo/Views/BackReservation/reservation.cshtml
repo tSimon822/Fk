@@ -4,7 +4,7 @@
     ViewBag.Title = "reservation";
 }
 
-<h2>reservation</h2>
+<h2>預約總表</h2>
 
 <p>
     @Html.ActionLink("新增預約", "Create")
@@ -32,37 +32,41 @@
         <th>
             @Html.DisplayNameFor(model => model.fRemark)
         </th>
-        <th>功能</th>
+        <th>
+            功能
+        </th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.fReservationId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.fReservationType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.fUserId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.fReservationDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.fReservationTimeId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.fnumReservation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.fRemark)
-        </td>
-        <td>
-            @Html.ActionLink("修改預約", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("完成預約", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fReservationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fReservationType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fUserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fReservationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fReservationTimeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fnumReservation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fRemark)
+            </td>
+            <td>
+                @Html.ActionLink("修改預約", "Edit", new { id = item.fReservationId }) |
+                @*@Html.ActionLink("取消預約", "Cancel", new { id = item.fReservationId }) |*@
+                @Html.ActionLink("完成通知", "Delete", new { id = item.fReservationId }, new { OnClick = "return confirm('確定已完成通知嗎?')" })
+            </td>
+        </tr>
+    }
 
 </table>

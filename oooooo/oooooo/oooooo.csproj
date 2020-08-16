@@ -439,6 +439,8 @@
     <Content Include="Views\FLogin\Forget.cshtml" />
     <Content Include="Views\FLogin\Home.cshtml" />
     <Content Include="Views\FLogin\Login.cshtml" />
+    <Content Include="Views\BackReservation\Edit.cshtml" />
+    <Content Include="Views\BackReservation\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
