@@ -48,9 +48,7 @@
         <th>
             活動日期
         </th>
-        <th>
-            活動時間
-        </th>
+      
         <th>
             地點
         </th>
@@ -90,9 +88,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.fEventDay)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.fEventTime)
-            </td>
+            
             <td>
                 @Html.DisplayFor(modelItem => item.fEventLocation)
             </td>
@@ -105,7 +101,7 @@
                 @Html.DisplayFor(modelItem => item.fRemark)
             </td>
             <td>
-                @Html.ActionLink("編輯", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("編輯", "Edit", new { id = item.fEventId }) |
                 @Html.ActionLink("詳細資料", "Details", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("刪除", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
